@@ -1,0 +1,63 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f0f0f0;
+    padding: 50px;
+}
+
+h1 {
+    color: #333;
+}
+
+#gameBoard {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 5px;
+    margin: 20px auto;
+    width: max-content;
+    position: relative; /* Added to position the line */
+}
+
+.cell {
+    background-color: #fff;
+    border: 2px solid #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+    cursor: pointer;
+}
+
+button {
+    font-size: 20px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#status {
+    margin-top: 20px;
+    font-size: 30px; /* Made the text bigger */
+    color: #d9534f; /* Changed the color */
+    font-weight: bold;
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* Changed the font */
+}
+
+#line {
+    position: absolute;
+    background-color: red;
+    height: 5px;
+    width: 0;
+    top: 0;
+    left: 0;
+    transform-origin: left;
+    transition: width 0.5s ease, transform 0.5s ease; /* Smooth animation */
+}
